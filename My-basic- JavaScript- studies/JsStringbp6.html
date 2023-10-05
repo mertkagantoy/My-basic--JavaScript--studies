@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // \ ile tırnak içinde alt satıra geçebilirim.
+        let name = "Mert\
+        Kagan\
+        Toy"
+        console.log(name);
+
+        // "" içinde "" kullanmak için
+        let name1 = "Mert \"Yazılım\" Kagan";
+        //aynı şey '' içinde geçerli
+        let name2 = 'Mert \'Yazilim\' Kagan';
+        console.log(name2);
+
+        // string içerisinde / değilde \ şeklinde ayırmak istersem eğer
+        let a = "Mert \\ Kagan"; // output Mert \ Kagan
+        // \n alt satıra geçer
+
+        // Ters tırnak kullanımı crtl alt enterın solundaki virgüle 2 kere bas çıktıda soldan paddingli olur
+        let b = `
+        Mert
+        Kagan
+        Toy
+        
+        `
+        console.log(b);
+    </script>
+    
+</body>
+</html>

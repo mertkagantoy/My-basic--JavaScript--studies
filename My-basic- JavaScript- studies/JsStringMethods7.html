@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let name = "Mert Kagan Toy";
+        let newName;
+        //1-)slice
+        newName = name.slice(2,10);
+        
+        // name.slice(10) 10 dan sonrasını alır
+        // name.slice(-4) sondan 4. kadar gelir sonrasını alır
+
+        //2-) substring
+        // substring slice ile neredeyse birebir aynı tek farkı - değer verirsek - değeri sıfır olarak alıyor.yani name.slice(-2,10) dersem 0 dan 10 a gider
+
+        //3- substr
+        // substr nin slice ve substring den farkı 2. parametresini bitiş noktası değil gidilecek adım sayısı alması yani name.slice(2,6) dersem 2 den başla 6 adım git demek oluyor.
+
+
+        //4-)replace
+        // kelime içerisindeki bir harfi ya da karakteri değiştirmeye yarar
+        newName = name.replace("g","")
+
+
+        //5-)replaceAll
+        newName = name.replaceAll("a","")
+
+        //6-)toUpperCase(); tüm harfleri büyük yapar
+
+        //7-)toLowerCase(); tüm harfleri küçük yapar
+
+        //8-)concat
+        newName = name.concat("-", 21)
+        // bir eleman eklerken araya boşluk  veya özel bir karakter koymak istersem concat kullanabilirim 
+
+
+        //9-)trim stringin başlangıcında ve sonunda boşluklar varsa kaldırıyor
+        newName = name.trim()
+
+        //10)trimStart sadece başlangıçtaki boşlukları siliyor sondaki boşluklar kalıyor
+        newName = name.trimStart()
+
+        //11-)trimEnd sadece sondaki boşlukları siliyor
+        newName = name.trimEnd()
+
+        //12-)padStart verdiğim string verdiğim sayıdan daha az karakter varsa başlangıcına karakter ekliyor
+        newName = name.padStart(12,"x") // 20 karakterden az ise başına x ya da xler  koy
+
+
+        //13-)padEnd
+        newName = name.padEnd(15,"x")
+
+        //14-)charAt stringin içerisinde istediğim karakteri elde eltmemi sağlıyor
+        newName = name.charAt(1);
+
+
+        //15-)charCodeAt seçtiğin karakterin rakamsal karşılığını veriyor
+
+        newName = name.charCodeAt(0);
+        
+        //16-)split Js kodları arasında en çok kullandığımız metodlardan biridir.  verdiğim stringi verdiğim noktadan öncesi ve sonrası olarak ikiye ayırıyor ve bu parçaları bir array içerisinde veriyor. 
+        newName = name.split(" ");
+
+        console.log(newName);
+
+    </script>
+    
+</body>
+</html>

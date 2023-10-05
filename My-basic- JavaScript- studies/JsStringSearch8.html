@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script>
+        let name = "Mert Kagan Toy 444 A";
+        let result;
+
+        //1-)indexOf ; verdiğim değerin kaçıncı indexte olduğunu söyler bir çıktı döner bunu bir degişkende tutarız
+        //result = name.indexOf("M"); // 0 dan başlar gördüğü ilk M harfinin indeksini döner eğer 0 dan değil de 5. indeksten başla ve gördüğün ilk m harfinin indeksini dön dersem name.indexOf("M",5)
+
+        //2-)lastIndeksOf ilk bulduğu karakteri değilde son bulduğu karakteri dönsün istersem eğer kullanabilirim
+        //result = name.lastIndexOf("4") // 17. karakter olan 4 ü aldı
+
+        //3-)search : indexOf un yaptığı işlermi birebir yapıyor
+        //result = name.search("4") // outout 15
+        //indexOf tan 2 farkı var birincisi ben sarch te arama başlangıç değeri veremem ikinci ben search te tırnak işareti hariç arama yöntmeleri ile kullanabiliyorum 
+        //result = name.search(/4/) // output 15
+
+        //4-)match : girdiğimiz karakterin string içinde kaç tane olduğunu hesaplar
+        //result = name.match("a") //bana 6. indexte ki a harfini array olarak çıktı verir özellikleri ile ben tüm a harflerini istiyorsam eğer..
+        //result = name.match(/a/g) // buradaki g harfi global ın g si
+        // büyük küçük harf duyarlılığını kaldırarak aramak istersem
+        //result = name.match(/a/gi) //output :[a,a,A]
+
+        //5-)matchAll : match teki sonuçların tamamını hangi indekste bulunduğuyla beraber döner 
+        //result = name.matchAll("a") // bu girdi bana Regular Expression String Iterator hatası verir bunu console.log() kısmında şöyle düzeltebilirim 
+        //console.log(Array.from(result))
+        // aynı şekilde bunda da name.matchAll(/a/g) ve name.matchAll(/a/gi) kullanabilirim
+
+
+        //6-)includes : aradığımız değerin olup olmadığını bize true ya da false olarak döner.
+        result = name.includes("Mert Kagans")
+
+
+        //7-)startsWith : verdiğin girdinin başlangıç harfi olup olmadığını boolean değer olarak alırım
+        result = name.startsWith("M") //("M",6) 6. indekstan başla ilk harf M mi ?
+
+
+        //8-)endsWith startsWith in tam tersi sondaki karakteri sorguluyoruz
+        result = name.endsWith("a") 
+        // ilk 7 karakterine bakıp son karakterini sorgula dersem eğer
+        result = name.endsWith("a",7) // Kagan ın ilk a sı
+
+
+
+        console.log(result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>merhaba</h2>
+    <script>
+        let numbers = [1,10,2,9,3,8,19,10]
+        let result = ""
+        // //1-)forEach()
+        // numbers.forEach(myfunction)
+        // function myfunction(value) {
+        //     result += value + " ";
+        // }
+       //console.log(result);
+
+       //2-) map() ile yeni bir array listesini oluşturabiliyorum
+    //    const numbers2 = numbers.map(myfunction)
+    //    function myfunction(value){
+    //         return value*2
+    //    }
+    //    console.log(numbers2);
+
+    //3-) filter()
+    // const numbers2 = numbers.filter(myfunction)
+    // function myfunction(value) {
+    //     return value>5
+    // }
+    // console.log(numbers2);
+
+    // 4-) reduce() listemdeki tüm elemanları toplayabiliyorum
+    // let sum = numbers.reduce(myfunction)
+    // function myfunction(total, value){
+    //     return total + value
+    // }
+    // console.log(sum); // tüm değerleri topladım
+
+
+    //4-reduceRight() : reduce() ile aynı görevi yapar yalnız soldan sağa deği sağdan sola doğru elemanları toplar
+    // let sum = numbers.reduceRight(myfunction)
+    // function myfunction(total, value){
+    //     return total + value
+    // }
+    // console.log(sum); // tüm değerleri topladım
+
+    // 5-) every() : her değer
+    // result = numbers.every(myfunction) // eğer numbers içerisindeki tüm sayılar büyükse 18 den true döner değilse false döner
+    // function myfunction(value){
+    //     return value>18
+    // }
+    // console.log(result);
+
+    // 6-) some() bazı değerler
+    //result = numbers.some(myfunction) // eğer numbers içerisindeki bazı sayılar 18 den büyükse true döner değilse false döner. (bazı dediğim bir sayı dahi koşulu sağlarsa true döner )
+    // function myfunction(value){
+    //     return value>18
+    // }
+    // console.log(result);
+
+    // 7-) indexOf() belirttiğim değerin array içinde hangi indexte olduğunu döner eğer belirtilen değer array içinde yoksa -1 döner
+    // result = numbers.indexOf(10);
+    // console.log(result);
+
+    //8-) lastIndexOf() : indexOf() tan farkı index of bulduğu ilk değerin indeksini döner lastIndexOf() belirtilen değerden bir kaç tane varsa en sondakini indeksini verir
+    // result = numbers.lastIndexOf(10);
+    // console.log(result);
+
+    //9-) find() : belirtilen özelliklere uyan karakteri döndürür değişkene atayarak yazdırabiliriz
+    // result = numbers.find(myfunction)
+    // function myfunction(value){
+    //     return value > 18
+    // }
+    // console.log(result);
+
+    //10-)findIndex() : belirtilen özelliklere uyan karakterin indeksini döndürür değişkene atayarak yazdırabiliriz
+    result = numbers.findIndex(myfunction)
+    function myfunction(value){
+        return value > 18
+    }
+    console.log(result);
+
+    //11-)Array.from() : herhangi bir değeri karakter karakter Array olarak dönderebiliyorum
+    let words = "ABCDEFGH"
+    result = Array.from(words)
+    console.log(result); //output:['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+
+    //12-)Array.keys() : array in indekslerini dönderir
+    // result1 = result.keys();
+    // console.log(Array.from(result1));
+
+    //13-) entries() : array in elemanlarını ve indekslerini bir array içine koyar ve bunu her eleman için yapar
+    console.log(Array.from(result.entries()));
+
+    //14-)includes() : parametreye girdiğim değer array içinde var ise 5 yok ise false döner
+    console.log(numbers.includes(9));
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>mert</h2>
+    <script>
+        // JS Methods
+        const fruits = ["banana","apple","apricot"]
+
+        // 1-)tostring
+        // console.log(fruits.toString()); 
+
+        //2-) join
+        // console.log(fruits.join(" - ")); // mesela ',' yerine '-' ile ayırmak istersem
+
+        //3-)pop()
+        // console.log(fruits.pop()); // içerisindeki son elemanı bir tmp a atayıp çıkarıyor sonra consol a tmp ı yazdırıyor
+
+        //4-)push()
+        console.log(fruits.push("Mango")); // mango yu sona  ekler consol a eleman sayısını yazdırır (count u)
+
+        // 5-)shift()      
+        //console.log(fruits.shift()); // ilk elemanp tmp a atar siler tmp i yazdırır
+
+        // 6-)unshift() ilk indekse eleman ekler kalanı sağa iteler
+        console.log(fruits.unshift("orange")); // orange ı ekler ve eleman sayısını yazdırır
+
+        //7-) delete
+        //delete fruits[0] // 0. indeksteki elemanı siler ve silinen elemanın indeksi artık "emty" olur yani emty indeksi işgal eder
+        //console.log(fruits);
+
+        //8-) concat() birleştirme işlemi
+        const girls = ["ayşe","fatma","hayriye"]
+        const boys = ["alizan","mami","eno"]
+
+        const ages = [10,20,30]
+
+        //8.1) iki eleman birleştirme
+        //let result = girls.concat(boys) // girs array ine boys array ini ekliyor
+        //console.log(result);
+
+        //8.2-) 3 eleman birleştirme
+        //let result_ = girls.concat(boys, ages) // girs array ine boys array ini ekliyor
+        //console.log(result_);
+
+        // 9-) splice() array in istediğim indeksine eleman eklemek 
+        girls.splice(2,0,"zatice") //parametreler(hangi indekse,delete:0,neyi) , burada 0 şu demek splice normalde silme işlemi için kllanıldığı için silme parametresini sıfır koydum.
+        //console.log(girls);
+
+        //10- splice() silme işlemi için 
+        //girls.splice(0,3) //ilk indeksten başla 3 eleman sil yani 0,1 ve 2. indeksleri siler
+        console.log(girls);
+
+        //11- sort()
+        //girls.sort() // harf sırasına göre sılar
+
+        //12- reverse() ters çevirme
+        //girls.reverse()
+        console.log(girls);
+        const num = [12,7,15,5,11]
+
+        //13- sort sayılarda düzgün çalışmaz 20 ti 100 den büyük alır ilk rakamı büyük diye o yüzden bunu sayılarda kullanmak için bunu fonksiyon olarak kullanmak gerekiyor
+        //num.sort() 11 12 15 5 7 diye sıraladı küçükten büyüğe 
+        console.log(num);
+
+        //13.1 num.sort(function(a,b){return a-b}) //5 7 11 12 15 KÜÇÜKTEN BÜYÜĞE
+        // console.log(
+           // num.sort(function(a,b){return a-b})[num.length -1 ] en büyük değer
+            //);
+        //
+
+        //13.2 BÜYÜKTEN KÜÇÜĞE
+        //console.log(
+          //  num.sort(function(a,b){return b-a})[0] // EN BÜYÜK DEĞER
+            //);
+
+        //14- sıralamadan en büyük değere ulaşma
+        //console.log(Math.max.apply(null,num));
+        // console.log(Math.min.apply(null,num));
+
+        const cars = [
+            {type: "Volvo", year : 2016 },
+            {type: "Saab", year : 2001 },
+            {type: "BMV", year : 2010 }
+            ]
+
+        console.log(cars.sort(function(a,b){return a.year - b.year}));
+        
+    </script>
+</body>
+</html>

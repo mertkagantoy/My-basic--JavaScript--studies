@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>error inhibitor</h1>
+    <script>
+        // console.log("Pazartesi");
+        // setTimeout(() => { 
+        //     console.log("Sali")
+        //},2000); // salının talimatını verdi sonra çarşambayı halletti ama salının işi çarşambadan sonra oldu . çırağı bankaya ve pastaneye gönderme olayı çırak banka da 30 dk bekleyip pastaneye giderse buna senkron derim ama çırak personele görevi devredip pastanedeki işine giderse buna asenktron deriz      
+        //console.log("Çarşamba");
+
+        //Promise methodu
+        let promise = new Promise((res, rej) => { //res,rej : red ve kabul
+            setTimeout(() => {
+                res(console.log("Salı"));
+            },2000)
+        })
+
+        console.log("pazartesi");
+        promise.then(res=>{
+            console.log("çarşamba"); // salı çıktıktan sonra çarşambayı işler
+        }).catch(err => {
+            console.log(err);
+        });   // then metodu uygulamamızı bekletir
+
+        // biz promise i api isteklerinde kullanıyoruz. dış kaynaktan bir api isteği yapıyorsak api istekleri bize promise olarak gelmelidirlerki biz bu api isteğinin sonucunun ne zaman geliceğini bilmeyiz o yüzen uygulamayı bekletiriz .then ile 
+    </script>
+</body>
+</html>

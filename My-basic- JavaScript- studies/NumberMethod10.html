@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Number Methods</h2>
+    <p>toFixed() yöntemi, bir sayıyı belirli sayıda basamağa yuvarlar.</p>
+    <p>Parayla çalışmak için toFixed(2) mükemmeldir</p>
+
+    <p id="fixed"></p>
+    <script>
+        // bazı kavramlar 123e5 = 12300000 
+        // bigint büyük sayıları tutmaya yarar sonuna n koyarsak çevirebiliriz
+        // let x = 999999999999999n ve x/2 diyemeyiz bigint decimal sayıya çevrilemez bigint bir numeric değişken türü diyebiliriz
+        // let x ; diye tanımladığımız diyelim bu değişkenin bozulmadan alabileceği max ve min değişkeni Number.MAX_SAFE_INTEGER(x) ve Number.MIN_SAFE_INTEGER(x) ile öğrenebiliriz. 
+        // 10 / 0 çıktısı infinity dir yani sonsuz demektir typeOf(10/0) NaN(not a number) , typeOf infinity numeric tir
+
+        //Şimdi number methodlara  geçelim 
+
+        //JS Number Methods  *******************
+
+        //toString()
+        // let x = 10
+        // console.log(x.toString() + 19);
+
+        //toExpenontial() : bir sayıyı üstel gösterime dönüştürür
+        // let x = 9.656;
+        // console.log(x.toExponential());
+
+        // toFixed() toFixed() yöntemi, bir sayıyı belirli sayıda basamağa yuvarlar. ve sayıyı string e çeviri
+        let x = 9.656;
+        document.getElementById("fixed").innerHTML = x.toFixed(0) + "<br>" +
+        x.toFixed(2) + "<br>" +
+        x.toFixed(4) + "<br>" +
+        x.toFixed(6) + "<br>" 
+
+   
+
+        // toPrecision(), belirtilen uzunlukta yazılmış bir sayı içeren bir dize döndürür: .. toFixed ten farkı toFixed basamaktan sonrası için düzenleme yaparken bu sayının tamamını düzenliyor ve aynı zamanda sayıyı string e çeviriyor
+        //let y = 9.656;
+            
+        //console.log(typeof y.toPrecision(2)); // sayıyı 2 haneye düşürür ve sayıyı string e çevirir
+
+        // ValueOf() JavaScript'te bir sayı, ilkel bir değer (typeof = sayı) veya bir nesne (typeof = nesne) olabilir. ValueOf() yöntemi, Number nesnelerini ilkel değerlere dönüştürmek için JavaScript'te dahili olarak kullanılır. Kodunuzda kullanmak için hiçbir neden yoktur.
+        let a = 123;
+        console.log(a.valueOf());
+        console.log((123).valueOf());
+        console.log((100 + 23).valueOf());
+
+
+        //Number()
+        console.log("Number(5): " + Number(5));
+        console.log("Number(true): " + Number(true));
+        console.log("Number(false): " + Number(false));
+        console.log("parseInt(10): " + parseInt(10));
+        console.log("Number(\"10a\"): " + Number("10a"));
+        console.log("Number(new Date(2002-01-01) ): " + Number(new Date("2002-01-01"))); // bana gün karşılığını verir int olarak verir
+        console.log("parseInt(10): " + parseInt(10));
+        console.log("parseInt(\"10\"): " + parseInt("10"));
+        console.log("parseInt(\"10 years\"):" + parseInt("10 years"));
+        console.log("parseInt(10.33): " + parseInt(10.33));
+        console.log("parseFloat(10): " + parseFloat(10.33));
+        console.log("parseFloat(\"10.33 years\"):" + parseFloat("10 years"));
+
+         
+        
+        
+    </script>
+</body>
+</html>

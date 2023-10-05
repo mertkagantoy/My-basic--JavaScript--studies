@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JS Array
+        // let cars = new Array({mert: "kagan", kagan: "toy"},"Saab","Volvo",33)
+        // cars[1] = "toyota"
+
+        let cars = new Array({mert: "kagan", kagan: "toy"},
+        {mert: "kagan", kagan: "toy"},
+        {mert: "kagan", kagan: "toy"},
+        {mert: "kagan", kagan: "toy"})
+
+        cars[1].mert = "omar"
+
+        console.log(cars);
+        console.log(cars.length);
+        console.log(cars[cars.length-1]); // son elemana ulaşma
+
+        cars.push({mert: "kagan", kagan: "toy"}) // eleman ekleme
+        console.log(cars);
+
+        cars[5] = {mert:"omar",kagan:"değişik"} // eleman ekleme
+        console.log(cars);
+    </script>
+</body>
+</html>

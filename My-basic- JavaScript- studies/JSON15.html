@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    
+
+    <script>
+        let jsonText = 
+            {
+                "key" : "value",
+
+                "key2" : {
+                    "key" : "value"
+                },
+                "key3" : [
+                    {
+                        "key2":"value2"
+                    }
+                ]
+                
+            };
+
+    console.log(jsonText);
+    console.log(JSON.parse(jsonText)); //string yapısını json a çevirir
+    console.log(JSON.stringify(JSON.parse(jsonText))) // JSON YAPISINI STRİNG  E ÇEVİRİR
+    </script>
+</body>
+</html>

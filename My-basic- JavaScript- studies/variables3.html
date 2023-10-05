@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // JS Syntax
+
+        //Fixed - Literals ; sabit değişkenler
+
+        //variable - variables;değiştirilebilir değişkenler
+
+        //fixed
+        // 10.5;
+        // "mert kagan"
+
+        //variable
+        //let x = 10;
+        
+        // değişken türleri let -vat -const ; let ile var teknik olarak aynı işi yapıyor
+
+        // let a = 10;
+        // var b = 15;
+        // let var ' ın yeni kullanımı bir kaç teknik fark var ama yeni değişken kullanırken let fixed da ise const kullanıcağız. const a mtlaka başlangıç değeri veirlmeli const a; diye tanımlama yapılamaz undefşned vrebilirsiniz null da verebilirsiniz
+        //const c = 20;
+
+        // let ile tek seferde farklı türde değişkenler tutabilirsiniz
+        // let 
+        // t=10, 
+        // y= "mert", 
+        // u= true;
+        // bu şekilde parçalayıp okunaklı yapabilirsiniz
+
+        //var ile let arasında fark inceleyelim
+        // var o = "toyota";
+        // var o; || var o = 15;
+        // var ile  değişkeni var ile tekrar çağırabilir ya da aynı değişkenle tanımlayabilirken let ile müsade edilmiyor hata alıyoruz let keyword unu silmemizi ister
+        // let v = "toyota";
+        // let v; || let v = 15;
+
+
+        //let $name = "Mert"; // özellikler profesyone coderlar değişken isimlendirmelerinde özelleştirmek için dolar işareti kullanıyor 
+
+        // süslü parantez açar ve içerisinde değişken tnaımlarsam
+        // {
+        //     let x = 2;
+        // }
+        //console.log(x);// x i bulamaz
+        // çünkü let keyword u sadece tanımlandığı parantez ya da tanımlandığı yapı içerisinde çağırılabilir. Ama var keyword unde böyle bir durum yok.
+
+        //aynı şekilde let gibi tanımlanmış bir const u 2. kez tanımlayamazsınız
+        //const a = 20;
+        // const a; xxxx
+
+        //const ile array oluşturmak istersem
+
+        // const list = ["Mert","Kagan","Toy"]
+
+        // console.log(list[0]);
+        // Yeni bir değer eklemek için
+        // list.push("44")
+        // ekleme yapılabilir ama ben kalkıpta x = diyip aynı ya da farklı bir liste atayamam
+
+        // console.log(list[3]);
+
+        // aynı şekilde bir obje oluştumak istersem ve bir değer ismi verip buna value atarsam
+
+        //const x = {type: "Fiat"};
+        // bu yapı içerisindeki type ı istersem dışarıdan değiştirebiliyorum
+        //x.type ="Mert"; 
+        //console.log(x);
+        // ama ben aynı array deki gibi kalkıpta objeyi aynı şekilde atayamam
+        //x = {type: "Mert"}; xxxxx
+
+        //obje
+        //let myObject = {name: "MERT", age: 21}
+        //console.log(object); // diyerek objeyi bütün şekilde çağırabiliyorum
+        //let myObject = {name: "MERT", age: 21, nulldeger: ""|null|undefined}
+
+        //x === y x ye eşit ve type ı da eşit ise yani 5==='5' false döner ama 5=='5' true döner
+        
+        // x!==y x y ye eşit değilse ve type da eşit değilse
+        //x? null olup olmadığını ya da undefines olup olmadığını
+        // x! var olup olmadığını sorguluyor
+
+        //typeof içerisine verdiğimiz değişkenin tipini belirtir
+
+        //instanceof bu değişkenin bir nesneden türeyip türemediğimi belirtir
+        
+        //not: ~5 = ~0101 = 1010= decimal:10
+        //xor: 5^1 =0101^0001=0100
+        //left shift: 5<<1 = 0101<<1= 1010 = decimal:10
+        //right shift: 5:1 = 0010
+
+        // array içinde obje
+        let list = typeof[{name: "Mert", lastName: "Toy"},21,"Mert"]
+        console.log(list);
+        
+
+
+
+    </script>
+    
+</body>
+</html>
